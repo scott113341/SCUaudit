@@ -1,0 +1,293 @@
+Report Results
+Return
+ 
+Unofficial Degree Audit
+Print Date   :  2013-09-27
+Name      :  Ryan Tsao
+Student ID:  00000798790
+TRANSFER STUDENT
+                  - - - - -   Academic Program History   - - - - -
+Program     :  Undergraduate Engineering
+2011-06-30  :  Active in Program
+               2011-06-30 : Computer Engineering Major
+2011-09-27  :  Active in Program
+               2011-09-27 : Computer Science & Engineering Major
+2011-11-14  :  Active in Program
+               2011-11-14 : Computer Science & Engineering Major
+               2011-11-14 : Design Thinking Pathway
+Program     :  Undergraduate Arts & Sciences
+2013-04-23  :  Active in Program
+               2013-04-23 : Computer Science (Math) Major
+               2013-04-23 : Design Thinking Pathway
+2013-09-26  :  Active in Program
+               2013-09-26 : Computer Science (Math) Major
+               2013-09-26 : Mathematics Minor
+               2013-09-26 : Design Thinking Pathway
+2013-09-26  :  Active in Program
+               2013-09-26 : Computer Science (Math) Major
+               2013-09-26 : Mathematics Minor
+               2013-09-26 : Art History Minor
+               2013-09-26 : Design Thinking Pathway
+                      - - - - -   Transfer Credits   - - - - -
+Transfer Credit from RENSSELAER (semester)
+Applied Toward Undergraduate Engineering Program
+ARTS       75       Basic Graphic Design              6.00     6.00 CR
+CSCI       10       Intro to Computer Science         6.00     6.00 CR
+CSCI       60       Object-oriented Programming       3.00     3.00 CR
+CSCI       61       Data Structures                   3.00     3.00 CR
+MATH       22       Differential Equations            6.00     6.00 CR
+PHYS       31       Phys Scientists and Engrs I       6.00     6.00 CR
+TRCR        1       Elective Credit                   6.00     6.00 CR
+TRCR        1       Elective Credit                   1.50     1.50 CR
+TRCR        1       Elective Credit                   6.00     6.00 CR
+TRCR       21       Social Science                    6.00     6.00 CR
+  Course Trans GPA:     0.000  Transfer Totals :     33.00    49.50          0.000
+                        - - - - -   Test Credits   - - - - -
+Test Credits Applied Toward Undergraduate Engineering Program
+Advanced Placement Exam        Mathematics: Calculus BC                        5
+Transferred to Term Fall 2011 as
+MATH       11       Calculus & Analytic Geometry I    4.00     4.00 CR
+Advanced Placement Exam        Mathematics: Calculus BC                        5
+Transferred to Term Fall 2011 as
+MATH       12       Calculus & Analytic Geom II       4.00     4.00 CR
+Advanced Placement Exam        Mathematics: Calculus BC                        5
+Transferred to Term Fall 2011 as
+MATH       13       Calculus & Analytic Geom III      4.00     4.00 CR
+Advanced Placement Exam        Spanish Language                                4
+Transferred to Term Fall 2011 as
+SPAN       21       Intermediate Spanish I            4.00     4.00 CR
+Advanced Placement Exam        United States History                           5
+Transferred to Term Fall 2011 as
+HIST       96A      Intro to the Hist of the US I     4.00     4.00 CR
+_____________________________________________________________________________________
+     -  -  -  -  A C A D E M I C   A D V I S E M E N T   R E P O R T  -  -  -  -
+_____________________________________________________________________________________
+Report on Undergraduate Career
+Requirements Not Satisfied
+Undergraduate Arts & Sciences Program
+Requirements Not Satisfied
+  Undergraduate General Graduation Requirement: GPA. (RG 146)
+      Students must attain an average of C (2.000) in their total course load.
+      GPA     (required/actual): 2.000/3.887
+  Undergraduate General Graduation Requirement: upper-division units. (RG 198)
+      Students must complete a minimum of 60 upper-division quarter units.
+  Undergraduate General Graduation Requirement: Residency.
+  (RG 199)
+      Students must meet the residency requirement of a minimum 45 units at the
+      Santa Clara campus after achieving junior standing.
+  University General Graduation Requirement: Total Units. (RG 219)
+      Students must complete 175 units.
+      Limit of 20 units of Independent Study, Directed Reading, Practicum or
+      Internship (course numbers 198 and 199)
+  COURSES WITHOUT VALID GRADES AND COURSES IN PROGRESS (IP): (RG 326)
+      Term       Course               Description            Units  Grade Code
+      Fall 2011  COEN        19       Discrete Mathematics    4.00   W     EN
+      Fall 2013  COEN       177       Operating Systems       4.00         EN
+      Fall 2013  COEN       177L      Operating Systems La    1.00         EN
+      Fall 2013  CSCI       168       Computer Graphics       5.00         EN
+      Fall 2013  ENGR       110       Engr Project for the    2.00         EN
+      Fall 2013  MATH       165       Linear Programming      5.00         EN
+      Fall 2013  TESP       159       Ethics of War & Peac    5.00         EN
+  FOUNDATIONS AND EXPLORATIONS: ARTS AND SCIENCES  (RG 591)
+  Overall Requirement Not Satisfied -
+      Critical Thinking and Writing I
+      Term       Course               Description            Units  Grade Code
+      Fall 2011  ENGL         1A      Critical Thinking &     4.00   A     EN
+      Critical Thinking and Writing II
+      Term       Course               Description            Units  Grade Code
+      Wtr 2012   ENGL         2A      Critical Thinking &     4.00   A     EN
+    Cultures and Ideas I and II:  Two courses from the same subject and topic.
+    Requirement Not Satisfied -
+      Cultures and Ideas I
+      Requirement Not Satisfied -
+      Courses (required/actual/needed): 1.00/0.00/1.00
+      Cultures and Ideas II
+      Requirement Not Satisfied -
+      Courses (required/actual/needed): 1.00/0.00/1.00
+      Second Language for BS Natual Science majors: at least the second course
+      in the first-year sequence
+      Term       Course               Description            Units  Grade Code
+      Fall 2011  SPAN        21       Intermediate Spanish    4.00   CR    TE
+      Mathematics
+      Term       Course               Description            Units  Grade Code
+      Fall 2011  MATH        11       Calculus & Analytic     4.00   CR    TE
+      Religion, Theology & Culture: Transfer students with 44 or more units of
+      transfer coursework may take any two courses at any level (IP)
+      Term       Course               Description            Units  Grade Code
+      Wtr 2013   RSOC         9       Ways of Understandin    4.00   A     EN
+      Fall 2013  TESP       159       Ethics of War & Peac    5.00         EN
+      Ethics
+      Term       Course               Description            Units  Grade Code
+      Spr 2013   ENGR        19       Ethics in Technology    4.00   A     EN
+      Civic Engagement  Note: cannot be satisfied by Advanced Placement, or
+      transfer credit. (IP)
+      Term       Course               Description            Units  Grade Code
+      Fall 2013  ENGR       110       Engr Project for the    2.00         EN
+      Diversity
+      Requirement Not Satisfied -
+      Courses (required/actual/needed): 1.00/0.00/1.00
+      Cultures and Ideas III
+      Term       Course               Description            Units  Grade Code
+      Spr 2013   ARTH       161       Photography in Japan    5.00   A-    EN
+      Arts
+      Term       Course               Description            Units  Grade Code
+      Fall 2011  ARTS        75       Basic Graphic Design    6.00   CR    TR
+      Natural Science with Lab
+      Term       Course               Description            Units  Grade Code
+      Fall 2011  CHEM        11       General Chemistry I     5.00   A     EN
+      Social Science
+      Term       Course               Description            Units  Grade Code
+      Fall 2011  TRCR        21       Social Science          6.00   CR    TR
+    Science Technology and Society:   One course from the approved STS list OR
+    CSCI 10 with Critical Thinking and Writing I and II with the Science
+    Technology and Society component. Cannot be satisfied with transfer or test
+    credit.
+    Requirement Not Satisfied -
+  INTEGRATIONS: ARTS AND SCIENCES (RG 593)
+  Experiential Learning for Social Justice (RG 596)
+  Cannot be satisfied by transfer or test credit.
+  Requirement Not Satisfied -
+  Advanced Writing: Arts and Sciences
+  Cannot be satisfied by transfer or test credit
+      Advanced Writing
+      Term       Course               Description            Units  Grade Code
+      Fall 2012  MATH       100       Writing: Mathematica    5.00   A-    EN
+  Pathways  (RG 595)
+  May not use transfer or test credit.
+    Your Pathway Requirements are listed below your major/minor requirements.
+Computer Science (Mathematics) Plan
+Requirements Not Satisfied
+  Computer Science ( Mathematics) Major Requirements (RG 250)
+  Requirement Not Satisfied -
+      MAJOR GPA
+      GPA     (required/actual): 2.000/3.859
+      CSCI 10
+      Term       Course               Description            Units  Grade Code
+      Fall 2011  CSCI        10       Intro to Computer Sc    6.00   CR    TR
+      MATH 11
+      Term       Course               Description            Units  Grade Code
+      Fall 2011  MATH        11       Calculus & Analytic     4.00   CR    TE
+      MATH 12
+      Term       Course               Description            Units  Grade Code
+      Fall 2011  MATH        12       Calculus & Analytic     4.00   CR    TE
+      MATH 13
+      Term       Course               Description            Units  Grade Code
+      Fall 2011  MATH        13       Calculus & Analytic     4.00   CR    TE
+      MATH 14
+      Term       Course               Description            Units  Grade Code
+      Fall 2012  MATH        14       Calculus & Analytic     4.00   A     EN
+      MATH 51
+      Term       Course               Description            Units  Grade Code
+      Spr 2012   MATH        51       Discrete Mathematics    4.00   B+    EN
+      MATH 52
+      Term       Course               Description            Units  Grade Code
+      Wtr 2013   MATH        52       Introduction Abstrac    4.00   A     EN
+      MATH 53
+      Term       Course               Description            Units  Grade Code
+      Wtr 2012   MATH        53       Linear Algebra          4.00   A     EN
+      CSCI 60
+      Term       Course               Description            Units  Grade Code
+      Fall 2011  CSCI        60       Object-oriented Prog    3.00   CR    TR
+      CSCI 61
+      Term       Course               Description            Units  Grade Code
+      Fall 2011  CSCI        61       Data Structures         3.00   CR    TR
+      CSCI 163
+      Term       Course               Description            Units  Grade Code
+      Wtr 2013   CSCI       163       Theory of Algorithms    5.00   A     EN
+      One course from CSCI 161, 166 or 167
+      Term       Course               Description            Units  Grade Code
+      Fall 2012  CSCI       161       Theory Automata & La    5.00   A     EN
+      Two upper-division courses from; MATH 144, 176, 177,  CSCI 161, 162, 164,
+      165, 166, 167, 168, 169, 181, 182, 197 (IP)
+      Requirement Not Satisfied -
+      Courses (required/actual/needed): 2.00/1.00/1.00
+      Term       Course               Description            Units  Grade Code
+      Fall 2013  CSCI       168       Computer Graphics       5.00         EN
+      Two approved upper-divison Math electives, not on the list
+      Term       Course               Description            Units  Grade Code
+      Spr 2013   MATH       166       Numerical Analysis      5.00   A-    EN
+      Spr 2013   MATH       170       Development of Math     5.00   A     EN
+      Physics 31
+      Term       Course               Description            Units  Grade Code
+      Fall 2011  PHYS        31       Phys Scientists and     6.00   CR    TR
+      Physics 32
+      Term       Course               Description            Units  Grade Code
+      Spr 2012   PHYS        32       Phys Scientists and     5.00   B+    EN
+      COEN 20
+      Term       Course               Description            Units  Grade Code
+      Fall 2012  COEN        20       Intro to Embedded Sy    4.00   A-    EN
+      COEN or ELEN 21/21L
+      Term       Course               Description            Units  Grade Code
+      Spr 2012   COEN        21       Introduction to Logi    4.00   A     EN
+      Spr 2012   COEN        21L      Logic Design Lab        1.00   A     EN
+      COEN 177 (IP)
+      Term       Course               Description            Units  Grade Code
+      Fall 2013  COEN       177       Operating Systems       4.00         EN
+      One COEN upper division elective
+      Term       Course               Description            Units  Grade Code
+      Fall 2011  COEN       168       Mobile Application D    4.00   A     EN
+      One upper-division course from COEN, CSCI or CSCI 144, 176 or 177.
+      Term       Course               Description            Units  Grade Code
+      Wtr 2012   COEN       163       Web Usability           4.00   A     EN
+Mathematics Minor Plan
+  Mathematics Minor (RG 379)
+      MINOR GPA
+      GPA     (required/actual): 2.000/3.859
+      MATH 11
+      Term       Course               Description            Units  Grade Code
+      Fall 2011  MATH        11       Calculus & Analytic     4.00   CR    TE
+      MATH 12
+      Term       Course               Description            Units  Grade Code
+      Fall 2011  MATH        12       Calculus & Analytic     4.00   CR    TE
+      MATH 13
+      Term       Course               Description            Units  Grade Code
+      Fall 2011  MATH        13       Calculus & Analytic     4.00   CR    TE
+      MATH 14
+      Term       Course               Description            Units  Grade Code
+      Fall 2012  MATH        14       Calculus & Analytic     4.00   A     EN
+      MATH 52 or 53
+      Term       Course               Description            Units  Grade Code
+      Wtr 2012   MATH        53       Linear Algebra          4.00   A     EN
+      THREE UPPER DIVSION ELECTIVES  (No more than one course from Math 165 or
+      166 or a Computer Science course)
+      Term       Course               Description            Units  Grade Code
+      Fall 2012  MATH       100       Writing: Mathematica    5.00   A-    EN
+      Spr 2013   MATH       166       Numerical Analysis      5.00   A-    EN
+      Spr 2013   MATH       170       Development of Math     5.00   A     EN
+Art History Minor Plan
+Requirements Not Satisfied
+  Art History Minor
+  Requirement Not Satisfied -
+      MINOR GPA
+      GPA     (required/actual): 2.000/3.885
+      TWO COURSES FROM ARTH 21-26
+      Requirement Not Satisfied -
+      Courses (required/actual/needed): 2.00/0.00/2.00
+      One STUDIO ART course
+      Term       Course               Description            Units  Grade Code
+      Fall 2011  ARTS        75       Basic Graphic Design    6.00   CR    TR
+      Three upper division ARTH courses (two must be taken at SCU)
+      Requirement Not Satisfied -
+      Units   (required/actual/needed): 14.50/5.00/9.50
+      Courses (required/actual/needed): 3.00/1.00/2.00
+      Term       Course               Description            Units  Grade Code
+      Spr 2013   ARTH       161       Photography in Japan    5.00   A-    EN
+      One lower or upper-division  ART HISTORY course (only 4 units of ARTH
+      98/198 may count)
+      Term       Course               Description            Units  Grade Code
+      Wtr 2012   ARTH        11A      Cultures and Ideas I    4.00   A     EN
+Design Thinking Plan
+Requirements Not Satisfied
+  Design Thinking Pathway (RG 880)
+  Overall Requirement Not Satisfied -
+      Design Thinking
+      Units   (required/actual): 12.00/12.00
+      Courses (required/actual): 3.00/3.00
+      Term       Course               Description            Units  Grade Code
+      Spr 2012   COEN        21       Introduction to Logi    4.00   A     EN
+      Fall 2012  COEN        20       Intro to Embedded Sy    4.00   A-    EN
+      Spr 2013   ENGR        19       Ethics in Technology    4.00   A     EN
+    Pathway Materials
+    Requirement Not Satisfied -
+_____________________________________________________________________________________
+Return
