@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="scuaudit">
   <head>
     <title>SCU&#8226;audit</title>
 
@@ -7,9 +7,11 @@
     <script src="js/application.min.js"></script>
   </head>
 
-  <body>
+  <body ng-controller="HomeCtrl">
     <div class="container">
       <h1>SCU&#8226;audit</h1>
+      <p>{{hi}}</p>
+      <input ng-model="hi" type="text" />
     </div>
   </body>
 </html>

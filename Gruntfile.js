@@ -11,7 +11,10 @@ module.exports = function(grunt) {
         src: [
           'app/js/src/lib/jquery-2.0.3.min.js',
           'app/js/src/lib/bootstrap-3.0.0.min.js',
-          'app/js/src/lib/**/*.js'
+          'app/js/src/lib/**/*.js',
+
+          'app/js/src/app/app.js',
+          'app/js/src/app/**/*.js'
         ],
         dest: 'app/js/application.min.js'
       }
