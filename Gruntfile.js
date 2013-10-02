@@ -9,14 +9,14 @@ module.exports = function(grunt) {
       },
       build: {
         src: [
-          'app/js/src/lib/jquery-2.0.3.min.js',
-          'app/js/src/lib/bootstrap-3.0.0.min.js',
-          'app/js/src/lib/**/*.js',
+          'public/js/src/lib/jquery-2.0.3.min.js',
+          'public/js/src/lib/bootstrap-3.0.0.min.js',
+          'public/js/src/lib/**/*.js',
 
-          'app/js/src/app/app.js',
-          'app/js/src/app/**/*.js'
+          'public/js/src/app/app.js',
+          'public/js/src/app/**/*.js'
         ],
-        dest: 'app/js/application.min.js'
+        dest: 'public/js/application.min.js'
       }
     },
 
@@ -24,7 +24,7 @@ module.exports = function(grunt) {
     sass: {
       build: {
         files: {
-          'app/css/application.min.css': 'app/css/src/application.scss'
+          'public/css/application.min.css': 'public/css/src/application.scss'
         }
       }
     },
@@ -35,11 +35,11 @@ module.exports = function(grunt) {
         spawn: false
       },
       js: {
-        files: ['app/js/src/**/*'],
+        files: ['public/js/src/**/*'],
         tasks: ['uglify']
       },
       css: {
-        files: ['app/css/src/**/*'],
+        files: ['public/css/src/**/*'],
         tasks: ['sass']
       }
     }
