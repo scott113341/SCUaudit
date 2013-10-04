@@ -3,15 +3,37 @@
   <head>
     <title>SCU&#8226;audit</title>
 
-    <link rel="stylesheet" href="public/css/application.min.css" />
-    <script src="public/js/application.min.js"></script>
+    <link rel="stylesheet" href="css/application.min.css" />
+    <script src="js/application.min.js"></script>
   </head>
 
   <body ng-controller="HomeCtrl">
-    <div class="container">
+    <div class="header container">
       <h1>SCU&#8226;audit</h1>
 
-      <textarea ng-model="paste.string" autofocus style="width:100%; height:50px;"></textarea>
+      <textarea ng-model="paste.string" placeholder="Paste here" autofocus></textarea>
+    </div>
+
+    <hr>
+
+    <div class="container">
+      <div class="well">asdf</div>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 left">
+            <p>Created by Scott Hardy</p>
+          </div>
+          <div class="col-md-4 center">
+            <div class="fb-like" data-href="https://www.facebook.com/SCUzone" data-send="true" data-width="450" data-show-faces="false"></div>
+          </div>
+          <div class="col-md-4 right">
+            <p>Have feedback?  Let me know at <a href="mailto:shardy@scu.edu?subject=SCUaudit Feedback" target="_blank">shardy@scu.edu</a>.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
