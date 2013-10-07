@@ -7,7 +7,6 @@ app.controller('HomeCtrl', ['$scope', function($scope) {
   $scope.$watch('paste.string', function(paste_string) {
     // make paste array
     $scope.paste.array = paste_string.split("\n");
-    $scope.paste.array.unshift('firstline');
 
     if (paste_string.length === 0) {
       console.log('no paste detected');
@@ -29,7 +28,37 @@ app.controller('HomeCtrl', ['$scope', function($scope) {
 
 
     });
+
+
+
+
+
+
+    $scope.mcgee();
   };
+
+
+  $scope.mcgee = function() {
+    var string = $scope.paste.string;
+    var array = $scope.paste.array;
+
+    // get line where 'Academic Advisement Report' starts
+    var regex = /A C A D E M I C   A D V I S E M E N T   R E P O R T/;
+    var line_start = regex.exec(string).index;
+    line_start = string.lineNumber(line_start) + 2;
+
+    // get line where it ends
+    regex = /_{10,}\nReturn/;
+    var line_end = regex.exec(string).index;
+    line_end = string.lineNumber(line_end) - 1;
+
+    console.log(line_start, line_end);
+
+    console.log(array.lines(line_start, line_end));
+  };
+
+
+
 
 
 
@@ -39,9 +68,6 @@ app.controller('HomeCtrl', ['$scope', function($scope) {
 
   $scope.getActivePrograms = function() {
     var active_programs = [];
-
-    // get 'Academic Program History' section
-    var line_start, line_end;
 
     // get text from last 'Active in Program' section
     var r = /Active in Program\n((?:\s+[\d-]+\s:\s.+\n)+)/g;
