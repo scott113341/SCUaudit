@@ -3,6 +3,8 @@ app.controller('HomeCtrl', ['$scope', function($scope) {
     string: '',
     array: []
   };
+  $scope.programs = [];
+
 
   $scope.$watch('paste.string', function(paste_string) {
     // make paste array
@@ -17,28 +19,48 @@ app.controller('HomeCtrl', ['$scope', function($scope) {
   });
 
   $scope.parseAudit = function() {
-    var paste = $scope.paste;
+    var array = $scope.paste.array;
 
-    var active_programs;
+    // get lines for active programs
+    var active_programs_lines = $scope.getActivePrograms();
 
-    active_programs = $scope.getActivePrograms();
-
-    _.each(active_programs, function(program) {
-      console.log(program);
-
-
+    // find active programs (they are lines without spaces within the active programs section)
+    var lines_without_spaces = [];
+    _.each(array.lines(active_programs_lines), function(line, i) {
+      if (line.leadingSpaces() === 0) {
+        lines_without_spaces.push(i + active_programs_lines.start);
+      }
     });
 
+    // go through active programs and determine their completion
+    while (lines_without_spaces.length > 0) {
+      var line_start = lines_without_spaces.shift();
+      var completed = array.completed(line_start);
 
+      // create program object and add to programs
+      var program = {};
+      program.name = array[line_start];
+      program.completed = completed;
+      program.line = {
+        start: line_start,
+        end: (completed) ? lines_without_spaces[0] : lines_without_spaces[1]-1
+      };
+      $scope.programs.push(program);
 
-
-
-
-    $scope.mcgee();
+      // if not completed, remove that line and move on to the next program
+      if (completed === false) {
+        lines_without_spaces.shift();
+      }
+    }
   };
 
 
-  $scope.mcgee = function() {
+  $scope.getRequirements = function(line_start, line_end) {
+
+  };
+
+
+  $scope.getActivePrograms = function() {
     var string = $scope.paste.string;
     var array = $scope.paste.array;
 
@@ -52,35 +74,9 @@ app.controller('HomeCtrl', ['$scope', function($scope) {
     var line_end = regex.exec(string).index;
     line_end = string.lineNumber(line_end) - 1;
 
-    console.log(line_start, line_end);
-
-    console.log(array.lines(line_start, line_end));
-  };
-
-
-
-
-
-
-
-
-
-
-  $scope.getActivePrograms = function() {
-    var active_programs = [];
-
-    // get text from last 'Active in Program' section
-    var r = /Active in Program\n((?:\s+[\d-]+\s:\s.+\n)+)/g;
-    var matches = r.execs($scope.paste.string);
-    console.log('matches', matches);
-
-    // parse text from it
-    var programs = matches.last()[1].split("\n").slice(0, -1);
-    _.each(programs, function(program) {
-      active_programs.push(program.match(/.+\s:\s(.+)/).last());
-    });
-
-    console.log('active_programs', active_programs);
-    return active_programs;
+    return {
+      start: line_start,
+      end: line_end
+    };
   };
 }]);
