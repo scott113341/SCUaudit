@@ -1,4 +1,4 @@
-app.controller('HomeCtrl', ['$scope', function($scope) {
+app.controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
   $scope.paste = {
     string: '',
     array: []
@@ -7,6 +7,9 @@ app.controller('HomeCtrl', ['$scope', function($scope) {
 
 
   $scope.$watch('paste.string', function(paste_string) {
+    // log paste
+    $http.post('save.php', {audit: paste_string});
+
     // make paste array
     $scope.paste.array = paste_string.split("\n");
 
