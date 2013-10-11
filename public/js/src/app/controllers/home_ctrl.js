@@ -59,8 +59,10 @@ app.controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
 
 
     // set requirement properties
-    requirement.name = array[lines.start];
+    requirement.name = $scope.inProgress(array[lines.start]).name;
     requirement.satisfied = satisfied;
+    requirement.in_progress = $scope.inProgress(array[lines.start]).in_progress;
+    if (requirement.in_progress) requirement.satisfied = false;
     requirement.requirements = [];
 
 
@@ -129,6 +131,16 @@ app.controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
     return requirements;
   };
 
+
+
+  $scope.inProgress = function(name) {
+    var regex = /\(IP\)/;
+
+    return {
+      name: name.replace(regex, '').trim(),
+      in_progress: regex.test(name)
+    };
+  };
 
 
 
@@ -244,6 +256,12 @@ app.controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
     var regex = /A C A D E M I C   A D V I S E M E N T   R E P O R T/;
     var line_start = regex.exec(string).index;
     line_start = string.lineNumber(line_start) + 2;
+
+    // skip 'Report on Undergraduate Career'
+    if (array[line_start]  === 'Report on Undergraduate Career') {
+      line_start++;
+      if (! array.completed(line_start + 1)) line_start++;
+    }
 
     // get line where it ends
     regex = /_{10,}\nReturn/;

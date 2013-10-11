@@ -21,7 +21,7 @@ app.directive('condition', function() {
           label_class = 'progress-bar-danger';
           width = 5; // for 0% done, show a little bit of label
           break;
-        case (width === 100):
+        case (width >= 100):
           label_class = 'progress-bar-success';
           break;
         default:

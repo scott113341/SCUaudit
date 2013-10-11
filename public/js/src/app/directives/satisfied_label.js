@@ -4,8 +4,6 @@ app.directive('satisfiedLabel', function() {
     replace: true,
 
     link: function(scope, element, attrs) {
-      console.log('workinggggggggggggggg');
-
       var satisfied = scope.$eval(attrs.satisfiedLabel);
       var label_class = (satisfied) ? 'label-success' : 'label-danger';
       var label_text  = (satisfied) ? 'Complete' : 'Incomplete';
