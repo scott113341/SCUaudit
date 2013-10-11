@@ -4960,3 +4960,8 @@ div.footer {
     text-align: center; }
   div.footer .right {
     text-align: right; }
+
+.requirement {
+  padding: 5px 15px;
+  border: 1px solid #888;
+  border-radius: 5px; }

@@ -64,6 +64,119 @@ ________________________________________________________________________________
 _____________________________________________________________________________________
 Report on Undergraduate Career
 Requirements Not Satisfied
+Bioengineering Plan
+Requirements Not Satisfied
+  BIOENGINEERING MAJOR (711)
+  Overall Requirement Not Satisfied -
+      MAJOR GPA
+      GPA     (required/actual): 2.000/3.423
+      MUST COMPLETE 191 UNITS
+      MATH 11
+      Term       Course               Description            Units  Grade Code
+      Fall 2010  MATH        11       Calc & Analytic Geom    4.00   CR    TE
+      MATH 12
+      Term       Course               Description            Units  Grade Code
+      Fall 2010  MATH        12       Calculus & Analytic     4.00   CR    TE
+      MATH 13
+      Term       Course               Description            Units  Grade Code
+      Fall 2010  MATH        13H      Calc & Analytic Geom    4.00   A     EN
+      MATH 14
+      Term       Course               Description            Units  Grade Code
+      Wtr 2011   MATH        14       Calculus & Analytic     4.00   B     EN
+      AMTH 106
+      Term       Course               Description            Units  Grade Code
+      Spr 2011   AMTH       106       Differential Equatio    4.00   B     EN
+      AMTH 108
+      Term       Course               Description            Units  Grade Code
+      Wtr 2013   AMTH       108H      Probability & Statis    4.00   B+    EN
+      BIOL 21
+      Term       Course               Description            Units  Grade Code
+      Fall 2010  BIOL        21       Introduction to Phys    4.00   A     EN
+      BIOL 24
+      Term       Course               Description            Units  Grade Code
+      Fall 2011  BIOL        24       Intro to Cellular &     4.00   A     EN
+      BIOL 25
+      Term       Course               Description            Units  Grade Code
+      Wtr 2012   BIOL        25       Investigat:Cell/Mole    5.00   B     EN
+      BIOL 124 or BIOL 174
+      Requirement Not Satisfied -
+      Units   (required/actual/needed): 5.00/0.00/5.00
+      Courses (required/actual/needed): 1.00/0.00/1.00
+      CHEM 11
+      Term       Course               Description            Units  Grade Code
+      Fall 2010  CHEM        11       General Chemistry I     5.00   CR    TE
+      CHEM 12
+      Term       Course               Description            Units  Grade Code
+      Fall 2010  CHEM        12       General Chemistry II    5.00   CR    TE
+      CHEM 13
+      Term       Course               Description            Units  Grade Code
+      Spr 2011   CHEM        13       General Chemistry II    5.00   A     EN
+      CHEM 31
+      Term       Course               Description            Units  Grade Code
+      Fall 2011  CHEM        31       Organic Chemistry I     5.00   B     EN
+      CHEM 32
+      Term       Course               Description            Units  Grade Code
+      Wtr 2012   CHEM        32       Organic Chemistry II    5.00   B+    EN
+      PHYS 31
+      Term       Course               Description            Units  Grade Code
+      Wtr 2012   PHYS        31       Phys Scientists and     4.00   A     EN
+      PHYS 32
+      Term       Course               Description            Units  Grade Code
+      Spr 2012   PHYS        32       Phys Scientists and     5.00   A     EN
+      PHYS 33
+      Term       Course               Description            Units  Grade Code
+      Fall 2012  PHYS        33       Physics:Science & En    5.00   B     EN
+      ENGR 1
+      Term       Course               Description            Units  Grade Code
+      Wtr 2011   ENGR         1       Intro to Engineering    1.00   A     EN
+      ELEN 21 & 21L
+      Term       Course               Description            Units  Grade Code
+      Spr 2012   ELEN        21       Introduction to Logi    4.00   A     EN
+      Spr 2012   ELEN        21L      Logic Design Lab        1.00   A     EN
+      ELEN 50 & 50L
+      Term       Course               Description            Units  Grade Code
+      Spr 2013   ELEN        50       Electric Circuits I     4.00   C     EN
+      Spr 2013   ELEN        50L      Electric Circuits I     1.00   A     EN
+      MECH 10 & 10L (IP)
+      Term       Course               Description            Units  Grade Code
+      Fall 2013  MECH        10       Graphical Comm in De    4.00         EN
+      Fall 2013  MECH        10L      Graphical Comm in De    1.00         EN
+      COEN 44 & 44L OR 45 & 45L
+      Term       Course               Description            Units  Grade Code
+      Fall 2012  COEN        45       Applied Programming     4.00   A-    EN
+      Fall 2012  COEN        45L      Applied Program in M    1.00   A-    EN
+      BIOE 10
+      Term       Course               Description            Units  Grade Code
+      Spr 2011   BIOE        10       Introduction to Bioe    4.00   A-    EN
+      TWO COURSES FROM BIOE 153, 154 AND 155 (IP)
+      Requirement Not Satisfied -
+      Courses (required/actual/needed): 2.00/1.00/1.00
+      Term       Course               Description            Units  Grade Code
+      Fall 2013  BIOE       153       Biomaterials Science    4.00         EN
+      BIOE 161 & 161L (IP)
+      Term       Course               Description            Units  Grade Code
+      Fall 2013  BIOE       161       Biosensors/Bioinstru    4.00         EN
+      Fall 2013  BIOE       161L      Biosensor/Bioinstrum    1.00         EN
+      BIOE 162 & 162L
+      Term       Course               Description            Units  Grade Code
+      Wtr 2013   BIOE       162       BioSignals and Proce    4.00   C-    EN
+      Wtr 2013   BIOE       162L      BioSignals and Proce    1.00   A     EN
+      BIOE 194 (IP)
+      Term       Course               Description            Units  Grade Code
+      Fall 2013  BIOE       194       Design Project I        2.00         EN
+      BIOE 195
+      Requirement Not Satisfied -
+      Courses (required/actual/needed): 1.00/0.00/1.00
+      BIOE 196
+      Requirement Not Satisfied -
+      Courses (required/actual/needed): 1.00/0.00/1.00
+      Technical Electives: 15 units from approved track list
+      Requirement Not Satisfied -
+      Units   (required/actual/needed): 15.00/7.00/8.00
+      Term       Course               Description            Units  Grade Code
+      Spr 2012   CHEM        33       Organic Chemistry II    5.00   A-    EN
+      Fall 2012  BIOE       100       Bioengineering Resea    1.00   P     EN
+      Spr 2013   BIOE       192       Junior Design           1.00   P     EN
 Design Thinking Plan
 Requirements Not Satisfied
   Degisn Thinking Pathway (RG 881)
@@ -75,18 +188,6 @@ Requirements Not Satisfied
       Wtr 2011   ENGL         2H      Critical Think & Wri    4.00   A-    EN
       Fall 2011  ECON         1       Principles of Microe    4.00   A     EN
       Spr 2012   ELEN        21       Introduction to Logi    4.00   A     EN
-      BIOE 196
-      Requirement Not Satisfied -
-      Courses (required/actual/needed): 1.00/0.00/1.00
-      Requirement McGee
-      Requirement Not Satisfied -
-      Courses (required/actual/needed): 2.00/1.00/1.00
-      Term       Course               Description            Units  Grade Code
-      Wtr 2011   ENGL         2H      Critical Think & Wri    4.00   A-    EN
-      BIOE 161 & 161L (IP)
-      Term       Course               Description            Units  Grade Code
-      Fall 2013  BIOE       161       Biosensors/Bioinstru    4.00         EN
-      Fall 2013  BIOE       161L      Biosensor/Bioinstrum    1.00         EN
     Pathway Materials
     Requirement Not Satisfied -
 _____________________________________________________________________________________

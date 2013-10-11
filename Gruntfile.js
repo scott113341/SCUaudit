@@ -2,6 +2,18 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
+    // insert html partials
+    includes: {
+      options: {
+        includeRegexp: /^(\s*)<!--\s*include\s+"(\S+)"\s*-->\s*$/,
+        silent: true
+      },
+      build: {
+        src: 'index.src.html',
+        dest: 'index.min.html'
+      }
+    },
+
     // concatenate and minify javascript
     uglify: {
       options: {
@@ -34,8 +46,12 @@ module.exports = function(grunt) {
       options: {
         spawn: false
       },
+      html: {
+        files: ['index_page.html', 'public/js/src/app/templates/**/*.html'],
+        tasks: ['includes']
+      },
       js: {
-        files: ['public/js/src/**/*'],
+        files: ['public/js/src/**/*.js'],
         tasks: ['uglify']
       },
       css: {
@@ -48,10 +64,11 @@ module.exports = function(grunt) {
   // normal tasks
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-includes');
 
   // special tasks
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   // custom tasks
-  grunt.registerTask('default', ['uglify', 'sass']);
+  grunt.registerTask('default', ['includes', 'uglify', 'sass']);
 };

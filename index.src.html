@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html ng-app="scuaudit">
+  <head>
+    <title>SCU&#8226;audit</title>
+
+    <link rel="stylesheet" href="public/css/application.min.css" />
+    <script src="public/js/application.min.js"></script>
+  </head>
+
+  <body ng-controller="HomeCtrl">
+    <!-- angular templates -->
+    <!-- include "public/js/src/app/templates/condition.html" -->
+
+
+
+
+
+
+
+    <div class="container">
+      <div class="header col-md-12">
+        <h1>SCU&#8226;audit</h1>
+        <textarea ng-model="paste.string" placeholder="Paste here" autofocus></textarea>
+      </div>
+
+
+      <hr>
+
+
+
+      <div class="col-md-2">
+        <div class="well">
+          Mcgee
+        </div>
+      </div>
+
+
+      <div class="col-md-10">
+        <div ng-repeat="requirement_1 in requirements" class="requirement requirement-1">
+          <h3>{{requirement_1.name}}</h3>
+          <p>
+            <span satisfied-label="requirement_1.satisfied"></span>
+            <span in-progress-label="requirement_1.in_progress"></span>
+          </p>
+
+
+          <div ng-repeat="requirement_2 in requirement_1.requirements" class="requirement requirement-2">
+            <h4>{{requirement_2.name}}</h4>
+            <p>
+              <span satisfied-label="requirement_2.satisfied"></span>
+              <span in-progress-label="requirement_2.in_progress"></span>
+            </p>
+
+
+            <table class="table table-hover table-condensed" class="requirement requirement-3">
+              <tr ng-repeat="requirement_3 in requirement_2.requirements">
+                <td><strong>{{requirement_3.name}}</strong></td>
+                <td><span satisfied-label="requirement_3.satisfied"></span></td>
+                <td><span in-progress-label="requirement_3.in_progress"></span></td>
+                <td ng-if="requirement_3.conditions.length > 0">
+                  {{requirement_3.conditions}}
+                  <div ng-repeat="condition in requirement_3.conditions">
+                    <div condition="condition"></div>
+                  </div>
+                </td>
+              </tr>
+            </table>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 left">
+            <p>Created by Scott Hardy</p>
+          </div>
+          <div class="col-md-4 center">
+            <div class="fb-like" data-href="https://www.facebook.com/SCUzone" data-send="true" data-width="450" data-show-faces="false"></div>
+          </div>
+          <div class="col-md-4 right">
+            <p>Have feedback?  Let me know at <a href="mailto:shardy@scu.edu?subject=SCUaudit Feedback" target="_blank">shardy@scu.edu</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

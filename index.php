@@ -1,3 +1,3 @@
 <?php
-echo file_get_contents('index_page.html');
+echo file_get_contents('index.min.html');
 ?>
