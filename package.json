@@ -1,5 +1,11 @@
 {
   "name": "SCUaudit",
+
+  "repository": {
+    "type" : "git",
+    "url": "https://github.com/scott113341/SCUaudit.git"
+  },
+
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-uglify": "~0.2.4",
