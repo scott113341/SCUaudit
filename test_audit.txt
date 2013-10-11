@@ -1,0 +1,93 @@
+Report Results
+Return
+
+Unofficial Degree Audit
+Print Date   :  2013-09-27
+Name      :  Scott Hardy
+Student ID:  00000800773
+                  - - - - -   Academic Program History   - - - - -
+Program     :  Undergraduate Arts & Sciences
+2010-06-21  :  Active in Program
+               2010-06-21 : Biochemistry Major
+Program     :  Undergraduate Engineering
+2011-03-28  :  Active in Program
+               2011-03-28 : Bioengineering Major
+2011-03-28  :  Active in Program
+               2011-03-28 : Bioengineering Major
+               2011-03-28 : Spanish Studies Minor
+2012-02-06  :  Active in Program
+               2012-02-06 : Bioengineering Major
+               2012-02-06 : Spanish Studies Minor
+               2012-02-06 : Design Thinking Pathway
+2013-04-26  :  Active in Program
+               2013-04-26 : Bioengineering Major
+               2013-04-26 : Design Thinking Pathway
+                        - - - - -   Test Credits   - - - - -
+Test Credits Applied Toward Undergraduate Arts & Sciences  Program
+Advanced Placement Exam        Biology                        2010-01-01       5
+Transferred to Term Fall 2010 as
+TRCR        1       Elective Credit                   4.00     4.00 CR
+Advanced Placement Exam        Chemistry                      2009-01-01       5
+Transferred to Term Fall 2010 as
+CHEM       11       General Chemistry I L&L           5.00     5.00 CR
+CHEM       12       General Chemistry II L&L          5.00     5.00 CR
+Advanced Placement Exam        English Literature & Compostn  2010-01-01       5
+Transferred to Term Fall 2010 as
+TRCR        1       Elective Credit                   4.00     4.00 CR
+Advanced Placement Exam        English Language & Composition 2009-01-01       5
+Transferred to Term Fall 2010 as
+TRCR        1       Elective Credit                   4.00     4.00 CR
+Advanced Placement Exam        Government & Politics: Comprtv 2010-01-01       4
+Transferred to Term Fall 2010 as
+POLI        2       Intro to Comparative Politics     4.00     4.00 CR
+Advanced Placement Exam        Government & Politics: U.S.    2009-01-01       5
+Transferred to Term Fall 2010 as
+POLI        1       Introduction to U.S. Politics     4.00     4.00 CR
+Advanced Placement Exam        Mathematics: Calculus AB       2010-01-01       5
+Transferred to Term Fall 2010 as
+MATH       11       Calc & Analytic Geometry I        4.00     4.00 CR
+MATH       12       Calculus & Analytic Geom II       4.00     4.00 CR
+Advanced Placement Exam        Spanish Language               2010-01-01       5
+Transferred to Term Fall 2010 as
+SPAN       21       Intermediate Spanish I            4.00     4.00 CR
+ACT Assessment                 Composite                      2009-04-01      35
+ACT Assessment                 English                        2009-04-01      35
+ACT Assessment                 Math                           2009-04-01      35
+ACT Assessment                 Reading                        2009-04-01      34
+ACT Assessment                 Science Reasoning              2009-04-01      36
+Advanced Placement Exam        United States History          2008-01-01       3
+Scholastic Assessment Test I   Math                           2009-05-01     700
+Scholastic Assessment Test I   Critical Reading               2009-05-01     720
+Scholastic Assessment Test I   Writing                        2009-05-01     650
+_____________________________________________________________________________________
+     -  -  -  -  A C A D E M I C   A D V I S E M E N T   R E P O R T  -  -  -  -
+_____________________________________________________________________________________
+Report on Undergraduate Career
+Requirements Not Satisfied
+Design Thinking Plan
+Requirements Not Satisfied
+  Degisn Thinking Pathway (RG 881)
+  Overall Requirement Not Satisfied -
+      Design Thinking
+      Units   (required/actual): 12.00/12.00
+      Courses (required/actual): 3.00/3.00
+      Term       Course               Description            Units  Grade Code
+      Wtr 2011   ENGL         2H      Critical Think & Wri    4.00   A-    EN
+      Fall 2011  ECON         1       Principles of Microe    4.00   A     EN
+      Spr 2012   ELEN        21       Introduction to Logi    4.00   A     EN
+      BIOE 196
+      Requirement Not Satisfied -
+      Courses (required/actual/needed): 1.00/0.00/1.00
+      Requirement McGee
+      Requirement Not Satisfied -
+      Courses (required/actual/needed): 2.00/1.00/1.00
+      Term       Course               Description            Units  Grade Code
+      Wtr 2011   ENGL         2H      Critical Think & Wri    4.00   A-    EN
+      BIOE 161 & 161L (IP)
+      Term       Course               Description            Units  Grade Code
+      Fall 2013  BIOE       161       Biosensors/Bioinstru    4.00         EN
+      Fall 2013  BIOE       161L      Biosensor/Bioinstrum    1.00         EN
+    Pathway Materials
+    Requirement Not Satisfied -
+_____________________________________________________________________________________
+Return

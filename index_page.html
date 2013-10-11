@@ -16,9 +16,43 @@
 
     <hr>
 
+
+    <script id="condition.html" type="text/ng-template">
+      <div class="well">
+        {{condition}}
+        <br>
+        <strong>{{condition.values.1}} of {{condition.values.0}} {{condition.type | lowercase}} taken</strong>
+        <br>
+        <strong>{{percent}}% Complete</strong>
+        <div class="progress">
+          <div class="progress-bar" role="progressbar"></div>
+        </div>
+      </div>
+    </script>
+
+
+
     <div class="container">
-      <div ng-repeat="program in programs" class="well">
-        {{program}}
+      <div ng-repeat="requirement_1 in requirements" class="well">
+        <h3>{{requirement_1.name}} <span satisfied-label="requirement_1.satisfied"></span></h3>
+        {{requirement_1}}
+
+
+        <div ng-repeat="requirement_2 in requirement_1.requirements" class="well">
+          <h3>{{requirement_2.name}} <span satisfied-label="requirement_2.satisfied"></span></h3>
+          {{requirement_2}}
+
+
+          <div ng-repeat="requirement_3 in requirement_2.requirements" class="well">
+            <h3>{{requirement_3.name}} <span satisfied-label="requirement_3.satisfied"></span></h3>
+            {{requirement_3}}
+            <div ng-repeat="condition in requirement_3.conditions">
+              <div condition="condition"></div>
+            </div>
+
+
+          </div>
+        </div>
       </div>
     </div>
 
