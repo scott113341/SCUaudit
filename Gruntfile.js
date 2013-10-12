@@ -68,4 +68,5 @@ module.exports = function(grunt) {
 
   // custom tasks
   grunt.registerTask('default', ['includes', 'uglify', 'sass']);
+  grunt.registerTask('watcher', ['default', 'watch']);
 };
