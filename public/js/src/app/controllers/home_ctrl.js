@@ -105,9 +105,10 @@ app.controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
       });
     }
 
-    // else if doesn't have children get
+    // else if doesn't have children parse the requirement
     else if (!has_children) {
-      requirement.conditions = $scope.parseRequirement(sub_section_lines);
+      requirement.conditions = $scope.parseRequirement(sub_section_lines).conditions;
+      requirement.courses = $scope.parseRequirement(sub_section_lines).courses;
     }
 
     return requirement;
@@ -119,16 +120,24 @@ app.controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
 
     var array = $scope.paste.array;
     var parse = [];
-    var requirements = [];
+    var requirement = {};
+
+    requirement.conditions = [];
+    requirement.courses = [];
 
     _.each(array.lines(section_lines), function(line, i) {
       if (parse = $scope.parseRequiredActualNeeded(line)) {
         console.log(parse);
-        requirements.push(parse);
+        requirement.conditions.push(parse);
+      }
+
+      else if (parse = $scope.parseCourse(line)) {
+        console.log(parse);
+        requirement.courses.push(parse);
       }
     });
 
-    return requirements;
+    return requirement;
   };
 
 
@@ -230,11 +239,27 @@ app.controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
     }
   };
   $scope.parseCourse = function(line) {
+    // TODO add summer
     var regex = /(Wtr|Fall|Spr)\s(\d{4})\s+(\w+)\s+(\w+)\s+.+?\s{2,}([\d\.]+)\s+([\w\-\+]+)/;
     var course = regex.exec(line);
 
     if (course) {
-      return course.slice(1, 7);
+      course = course.slice(1, 7);
+
+      var quarter = function(q) {
+        if (q === 'Wtr') return 'Winter';
+        if (q === 'Spr') return 'Spring';
+        // TODO add summer
+        else return q;
+      };
+
+      return {
+        quarter: quarter(course[0]),
+        year: parseInt(course[1]),
+        name: course[2] + ' ' + course[3],
+        units: parseFloat(course[4]),
+        grade: course[5]
+      };
     }
     else {
       return false;

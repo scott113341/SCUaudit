@@ -16,9 +16,6 @@ module.exports = function(grunt) {
 
     // concatenate and minify javascript
     uglify: {
-      options: {
-        mangle: false
-      },
       build: {
         src: [
           'public/js/src/lib/jquery-2.0.3.min.js',
