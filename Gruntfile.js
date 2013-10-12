@@ -47,7 +47,7 @@ module.exports = function(grunt) {
         spawn: false
       },
       html: {
-        files: ['index_page.html', 'public/js/src/app/templates/**/*.html'],
+        files: ['index.src.html', 'public/js/src/app/templates/**/*.html'],
         tasks: ['includes']
       },
       js: {

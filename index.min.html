@@ -10,12 +10,13 @@
   <body ng-controller="HomeCtrl">
     <!-- angular templates -->
     <script id="condition.html" type="text/ng-template">
-      <div class="well">
-        {{condition}}
-        <br>
-        <strong>{{condition.values.1}} of {{condition.values.0}} {{condition.type | lowercase}} taken</strong>
-        <br>
-        <strong>{{percent | number:0}}% Complete</strong>
+      <div class="condition">
+        <p>
+          Progress:
+          <strong>{{condition.values.1}} of {{condition.values.0}} {{condition.type | lowercase}} taken</strong>
+          <!--<strong>{{percent | number:0}}% Complete</strong>-->
+        </p>
+
         <div class="progress">
           <div class="progress-bar" role="progressbar"></div>
         </div>
@@ -67,10 +68,11 @@
             <table class="table table-hover table-condensed" class="requirement requirement-3">
               <tr ng-repeat="requirement_3 in requirement_2.requirements">
                 <td><strong>{{requirement_3.name}}</strong></td>
-                <td><span satisfied-label="requirement_3.satisfied"></span></td>
-                <td><span in-progress-label="requirement_3.in_progress"></span></td>
+                <td>
+                  <span satisfied-label="requirement_3.satisfied"></span>
+                  <span in-progress-label="requirement_3.in_progress"></span>
+                </td>
                 <td ng-if="requirement_3.conditions.length > 0">
-                  {{requirement_3.conditions}}
                   <div ng-repeat="condition in requirement_3.conditions">
                     <div condition="condition"></div>
                   </div>

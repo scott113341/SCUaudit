@@ -4,7 +4,7 @@ app.directive('condition', function() {
     replace: true,
 
     link: function(scope, element, attrs) {
-      scope.$eval(attrs.conditions);
+      scope.$eval(attrs.condition);
 
       // calculate width
       var required = scope.condition.values[0];
