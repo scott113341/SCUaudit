@@ -4954,6 +4954,9 @@ div.footer {
   border-top: 1px solid #ccc;
   margin-top: 20px;
   padding-top: 10px; }
+  @media print {
+    div.footer {
+      display: none; } }
   div.footer .left {
     text-align: left; }
   div.footer .center {

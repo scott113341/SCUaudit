@@ -16,6 +16,10 @@ div.footer {
   margin-top: 20px;
   padding-top: 10px;
 
+  @media print {
+    display: none;
+  }
+
   .left {
     text-align: left;
   }
