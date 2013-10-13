@@ -24,9 +24,7 @@ app.controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
   });
 
 
-
-
-
+  // do magic
   $scope.parseAudit = function() {
     var array = $scope.paste.array;
 
@@ -40,6 +38,14 @@ app.controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
   };
 
 
+
+
+
+  ////////////////
+  // big parsing methods
+  // these methods do all of the heavy lifting audit parsing
+
+  // method that recursively gets requirements from between two lines
   $scope.getRequirements = function(lines) {
     console.log("\n\n###### getRequirements() ######");
     console.log('lines', lines);
@@ -49,16 +55,13 @@ app.controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
     var section_array = array.lines(lines);
     var requirement = {};
 
-
     // get current indentation
     var indent_level = section_array[0].leadingSpaces();
     console.log('top_level', indent_level);
 
-
     // check if requirement is satisfied
     var satisfied = !$scope.notSatisfiedLine(array[lines.start + 1]);
     console.log('requirement ' + array[lines.start] + ' satisfied: ' + satisfied);
-
 
     // set requirement properties
     requirement.name = $scope.inProgress(array[lines.start]).name;
@@ -67,13 +70,11 @@ app.controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
     if (requirement.in_progress) requirement.satisfied = false;
     requirement.requirements = [];
 
-
     // get sub-section lines
     var sub_section_lines = {};
     sub_section_lines.start = lines.start + ((satisfied) ? 1 : 2);
     sub_section_lines.end = lines.end;
     console.log('sub_section_lines', sub_section_lines);
-
 
     // if next section is indented more, run getRequirements() on it
     var has_children = array[sub_section_lines.start].leadingSpaces() > indent_level;
@@ -99,7 +100,6 @@ app.controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
 
       _.each(level_requirements, function(requirement_block) {
         console.log(requirement_block);
-
         console.log('here', requirement, requirement_block);
 
         if (requirement.constructor === Object) requirement = [];
@@ -117,6 +117,8 @@ app.controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
   };
 
 
+  // method that parses a last-level requirement, returning all of the conditions
+  // and courses for that requirement
   $scope.parseRequirement = function(section_lines) {
     console.log('parsing requirement');
 
@@ -143,141 +145,7 @@ app.controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
   };
 
 
-
-  $scope.inProgress = function(name) {
-    var regex = /\(IP\)/;
-
-    return {
-      name: name.replace(regex, '').trim(),
-      in_progress: regex.test(name)
-    };
-  };
-
-
-
-
-  $scope.getLevelRequirements = function(section_lines) {
-    var array = $scope.paste.array;
-    var offset = section_lines.start;
-    section_lines = array.lines(section_lines);
-
-    var requirements = [];
-
-    // return nothing if this section has children
-    var has_children = false;
-    _.each(section_lines, function(line) {
-      if (line.leadingSpaces() > section_lines[0].leadingSpaces()) has_children = true;
-    });
-    if (has_children) {
-      console.log('this section has child requirements, quitting getLevelRequirements()');
-      return requirements;
-    }
-
-    var this_requirement = {};
-    var new_requirement = true;
-    _.each(section_lines, function(line, i) {
-      console.log('line ' + i, line);
-
-      if (new_requirement) {
-        this_requirement.start = i + offset;
-      }
-
-      new_requirement = false;
-
-
-      var next_line = section_lines[i + 1];
-
-
-
-      // end of requirement: line has 'required/actual/needed' && next line isn't && next line is not column headers
-      if ($scope.parseRequiredActualNeeded(line) && !$scope.parseRequiredActualNeeded(next_line) && !/Term\s+Course\s+Description/.exec(next_line)) {
-        console.log("line has 'required/actual/needed' && next line is not column headers");
-        new_requirement = true;
-      }
-
-      // end of requirement: line is a taken course && next line is something else
-      if ($scope.parseCourse(line) && !$scope.parseCourse(next_line)) {
-        console.log('line is a taken course && next line is something else');
-        new_requirement = true;
-      }
-
-      // end of requirement: out of lines
-      if (i === section_lines.length - 1) {
-        console.log('out of lines');
-        new_requirement = true;
-      }
-
-
-
-      if (new_requirement) {
-        this_requirement.end = i + offset;
-        requirements.push(_.clone(this_requirement));
-        this_requirement = {};
-        console.log('end of requirement');
-      }
-    });
-
-    return requirements;
-  };
-
-
-
-
-  $scope.notSatisfiedLine = function(line) {
-    return /Not Satisfied/.test(line);
-  };
-  $scope.parseRequiredActualNeeded = function(line) {
-    var regex = /(Courses|Units)\s+\((.+?)\): ([\d\./]+)/;
-    var course = regex.exec(line);
-
-    if (course) {
-      course = course.slice(1, 4);
-      var requirement = {};
-      requirement.type = course[0];
-      requirement.metrics = course[1].split('/');
-      requirement.values = _.map(course[2].split('/'), function(a) { return parseFloat(a); });
-
-      return requirement;
-    }
-    else {
-      return false;
-    }
-  };
-  $scope.parseCourse = function(line) {
-    // TODO add summer
-    var regex = /(Wtr|Fall|Spr)\s(\d{4})\s+(\w+)\s+(\w+)\s+.+?\s{2,}([\d\.]+)\s+([\w\-\+]+)/;
-    var course = regex.exec(line);
-
-    if (course) {
-      course = course.slice(1, 7);
-
-      var quarter = function(q) {
-        if (q === 'Wtr') return 'Winter';
-        if (q === 'Spr') return 'Spring';
-        // TODO add summer
-        else return q;
-      };
-
-      return {
-        quarter: quarter(course[0]),
-        year: parseInt(course[1]),
-        name: course[2] + ' ' + course[3],
-        units: parseFloat(course[4]),
-        grade: course[5]
-      };
-    }
-    else {
-      return false;
-    }
-  };
-
-
-
-
-
-
-
-
+  // method that returns an array of all of the line boundaries for top-level requirements
   $scope.getActivePrograms = function() {
     var string = $scope.paste.string;
     var array = $scope.paste.array;
@@ -318,5 +186,134 @@ app.controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
     });
 
     return active_programs;
+  };
+
+
+  // method that returns all of the requirements at a certain level
+  $scope.getLevelRequirements = function(section_lines) {
+    var array = $scope.paste.array;
+    var offset = section_lines.start;
+    section_lines = array.lines(section_lines);
+
+    var requirements = [];
+
+    // return nothing if this section has children
+    var has_children = false;
+    _.each(section_lines, function(line) {
+      if (line.leadingSpaces() > section_lines[0].leadingSpaces()) has_children = true;
+    });
+    if (has_children) {
+      console.log('this section has child requirements, quitting getLevelRequirements()');
+      return requirements;
+    }
+
+    var this_requirement = {};
+    var new_requirement = true;
+    _.each(section_lines, function(line, i) {
+      console.log('line ' + i, line);
+
+      if (new_requirement) {
+        this_requirement.start = i + offset;
+      }
+
+      new_requirement = false;
+      var next_line = section_lines[i + 1];
+
+      // end of requirement: line has 'required/actual/needed' && next line isn't && next line is not column headers
+      if ($scope.parseRequiredActualNeeded(line) && !$scope.parseRequiredActualNeeded(next_line) && !/Term\s+Course\s+Description/.exec(next_line)) {
+        console.log("line has 'required/actual/needed' && next line is not column headers");
+        new_requirement = true;
+      }
+
+      // end of requirement: line is a taken course && next line is something else
+      if ($scope.parseCourse(line) && !$scope.parseCourse(next_line)) {
+        console.log('line is a taken course && next line is something else');
+        new_requirement = true;
+      }
+
+      // end of requirement: out of lines
+      if (i === section_lines.length - 1) {
+        console.log('out of lines');
+        new_requirement = true;
+      }
+
+      if (new_requirement) {
+        this_requirement.end = i + offset;
+        requirements.push(_.clone(this_requirement));
+        this_requirement = {};
+        console.log('end of requirement');
+      }
+    });
+
+    return requirements;
+  };
+
+
+
+
+
+  ////////////////
+  // line-parsing methods
+  // these methods parse or detect the format of single lines
+  $scope.notSatisfiedLine = function(line) {
+    return /Not Satisfied/.test(line);
+  };
+
+
+  $scope.parseRequiredActualNeeded = function(line) {
+    var regex = /(Courses|Units)\s+\((.+?)\): ([\d\./]+)/;
+    var course = regex.exec(line);
+
+    if (course) {
+      course = course.slice(1, 4);
+      var requirement = {};
+      requirement.type = course[0];
+      requirement.metrics = course[1].split('/');
+      requirement.values = _.map(course[2].split('/'), function(a) { return parseFloat(a); });
+
+      return requirement;
+    }
+    else {
+      return false;
+    }
+  };
+
+
+  $scope.parseCourse = function(line) {
+    // TODO add summer
+    var regex = /(Wtr|Fall|Spr)\s(\d{4})\s+(\w+)\s+(\w+)\s+.+?\s{2,}([\d\.]+)\s+([\w\-\+]+)/;
+    var course = regex.exec(line);
+
+    if (course) {
+      course = course.slice(1, 7);
+
+      var quarter = function(q) {
+        if (q === 'Wtr') return 'Winter';
+        if (q === 'Spr') return 'Spring';
+        // TODO add summer
+        else return q;
+      };
+
+      return {
+        quarter: quarter(course[0]),
+        year: parseInt(course[1]),
+        name: course[2] + ' ' + course[3],
+        units: parseFloat(course[4]),
+        grade: course[5]
+      };
+    }
+    else {
+      return false;
+    }
+  };
+
+
+  $scope.inProgress = function(name) {
+    var regex = /\(IP\)/;
+
+    return {
+      name: name.replace(regex, '').trim(),
+      in_progress: regex.test(name)
+    };
   };
 }]);
