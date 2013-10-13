@@ -34,7 +34,9 @@ app.controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
     var active_programs_lines = $scope.getActivePrograms();
     console.log('active_programs_lines', active_programs_lines);
 
-    $scope.requirements = [$scope.getRequirements(active_programs_lines)];
+    _.each(active_programs_lines, function(lines) {
+      $scope.requirements.push($scope.getRequirements(lines));
+    });
   };
 
 
@@ -276,6 +278,7 @@ app.controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
   $scope.getActivePrograms = function() {
     var string = $scope.paste.string;
     var array = $scope.paste.array;
+    var active_programs = [];
 
     // get line where 'Academic Advisement Report' starts
     var regex = /A C A D E M I C   A D V I S E M E N T   R E P O R T/;
@@ -293,9 +296,24 @@ app.controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
     var line_end = regex.exec(string).index;
     line_end = string.lineNumber(line_end) - 1;
 
-    return {
-      start: line_start,
-      end: line_end
-    };
+    // go through lines and find sections
+    var lines = array.lines(line_start, line_end);
+    var section_line_start = line_start;
+    var section_line_end = line_start;
+    _.each(lines, function(line, i) {
+      // if this line has no indent
+      // and it isn't a 'Requirements Not Satisfied' line
+      // and it's not the first line
+      if ((line.leadingSpaces() === 0 && !lines.completed(i) && i > 0) || i === lines.length-1) {
+        active_programs.push({
+          start: section_line_start,
+          end: section_line_end - ((i === lines.length-1) ? 0 : 1)
+        });
+        section_line_start = section_line_end;
+      }
+      section_line_end++;
+    });
+
+    return active_programs;
   };
 }]);

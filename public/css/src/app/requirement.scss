@@ -1,16 +1,26 @@
-.requirement {
-  padding: 5px 15px;
-  border: 1px solid #888;
-  border-radius: 5px;
-
-  &.requirement-1 {
+.requirements {
+  .requirement-1, .requirement-2 {
+    padding: 5px 15px 15px;
+    border: 1px solid #888;
+    border-radius: 5px;
   }
 
-  &.requirement-2 {
+  .requirement-1 {
+    margin-bottom: 20px;
 
+    h3 {
+      margin-top: 10px;
+    }
   }
 
-  &.requirement-3 {
-
+  .requirement-3 {
+    td {
+      &.name {
+        width: 25%;
+      }
+      &.labels {
+        width: 170px;
+      }
+    }
   }
 }

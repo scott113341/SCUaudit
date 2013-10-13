@@ -48,8 +48,10 @@
       </div>
 
 
-      <div class="col-md-10">
-        <div ng-repeat="requirement_1 in requirements" class="requirement requirement-1">
+      <div class="requirements col-md-10">
+        {{requirements}}
+
+        <div ng-repeat="requirement_1 in requirements" class="requirement-1">
           <h3>{{requirement_1.name}}</h3>
           <p>
             <span satisfied-label="requirement_1.satisfied"></span>
@@ -65,11 +67,12 @@
             </p>
 
 
-            <table class="table table-hover table-condensed" class="requirement requirement-3">
+            <table class="table table-hover table-condensed requirement requirement-3">
               <tr ng-repeat="requirement_3 in requirement_2.requirements">
-                <td><strong>{{requirement_3.name}}</strong></td>
-                <td>{{requirement_3}}</td>
-                <td>
+                <td class="name">
+                  <strong>{{requirement_3.name}}</strong>
+                </td>
+                <td class="labels">
                   <span satisfied-label="requirement_3.satisfied"></span>
                   <span in-progress-label="requirement_3.in_progress"></span>
                 </td>
