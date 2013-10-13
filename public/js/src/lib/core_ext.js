@@ -61,12 +61,3 @@ String.prototype.leadingSpaces = function() {
 
   return i;
 };
-
-
-
-
-
-// function to determine if a requirement is completed
-Array.prototype.completed = function(line) {
-  return ! /Not Satisfied/.test(this[line + 1]);
-};

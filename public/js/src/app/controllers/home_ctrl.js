@@ -56,7 +56,7 @@ app.controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
 
 
     // check if requirement is satisfied
-    var satisfied = array.completed(lines.start);
+    var satisfied = !$scope.notSatisfiedLine(array[lines.start + 1]);
     console.log('requirement ' + array[lines.start] + ' satisfied: ' + satisfied);
 
 
@@ -223,6 +223,9 @@ app.controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
 
 
 
+  $scope.notSatisfiedLine = function(line) {
+    return /Not Satisfied/.test(line);
+  };
   $scope.parseRequiredActualNeeded = function(line) {
     var regex = /(Courses|Units)\s+\((.+?)\): ([\d\./]+)/;
     var course = regex.exec(line);
@@ -288,7 +291,7 @@ app.controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
     // skip 'Report on Undergraduate Career'
     if (array[line_start]  === 'Report on Undergraduate Career') {
       line_start++;
-      if (! array.completed(line_start + 1)) line_start++;
+      if (! $scope.notSatisfiedLine(array[line_start + 1])) line_start++;
     }
 
     // get line where it ends
@@ -304,7 +307,7 @@ app.controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
       // if this line has no indent
       // and it isn't a 'Requirements Not Satisfied' line
       // and it's not the first line
-      if ((line.leadingSpaces() === 0 && !lines.completed(i) && i > 0) || i === lines.length-1) {
+      if ((line.leadingSpaces() === 0 && !$scope.notSatisfiedLine(line) && i > 0) || i === lines.length-1) {
         active_programs.push({
           start: section_line_start,
           end: section_line_end - ((i === lines.length-1) ? 0 : 1)
