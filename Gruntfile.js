@@ -31,6 +31,9 @@ module.exports = function(grunt) {
 
     // compile scss
     sass: {
+      options: {
+        style: 'compressed'
+      },
       build: {
         files: {
           'public/css/application.min.css': 'public/css/src/application.scss'
