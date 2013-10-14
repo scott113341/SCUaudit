@@ -261,7 +261,7 @@ app.controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
 
 
   $scope.parseRequiredActualNeeded = function(line) {
-    var regex = /(Courses|Units)\s+\((.+?)\): ([\d\./]+)/;
+    var regex = /(Courses|Units|GPA)\s+\((.+?)\): ([\d\./]+)/;
     var course = regex.exec(line);
 
     if (course) {
@@ -270,6 +270,7 @@ app.controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
       requirement.type = course[0];
       requirement.metrics = course[1].split('/');
       requirement.values = _.map(course[2].split('/'), function(a) { return parseFloat(a); });
+      requirement.show = (requirement.type === 'GPA') ? false : true;
 
       return requirement;
     }

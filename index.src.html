@@ -63,7 +63,7 @@
                 </td>
                 <td ng-if="requirement_3.conditions.length > 0">
                   <div ng-repeat="condition in requirement_3.conditions">
-                    <div condition="condition"></div>
+                    <div condition="condition" ng-show="condition.show"></div>
                   </div>
                 </td>
               </tr>
