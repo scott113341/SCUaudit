@@ -1,10 +1,11 @@
 app.controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
   // define models
+  $scope.requirements = [];
   $scope.paste = {
     string: '',
     array: []
   };
-  $scope.requirements = [];
+  var string, array;
 
 
   // watch for paste to start parsing
@@ -14,6 +15,10 @@ app.controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
 
     // make paste array
     $scope.paste.array = paste_string.split("\n");
+
+    // assign variables
+    string = $scope.paste.string;
+    array = $scope.paste.array;
 
     if (paste_string.length === 0) {
       console.log('no paste detected');
@@ -26,8 +31,6 @@ app.controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
 
   // do magic
   $scope.parseAudit = function() {
-    var array = $scope.paste.array;
-
     // get lines for active programs
     var active_programs_lines = $scope.getActivePrograms();
     console.log('active_programs_lines', active_programs_lines);
@@ -51,7 +54,6 @@ app.controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
     console.log('lines', lines);
 
     // define global array, section array, and empty requirement object
-    var array = $scope.paste.array;
     var section_array = array.lines(lines);
     var requirement = {};
 
@@ -122,7 +124,6 @@ app.controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
   $scope.parseRequirement = function(section_lines) {
     console.log('parsing requirement');
 
-    var array = $scope.paste.array;
     var parse = [];
     var requirement = {};
 
@@ -147,8 +148,6 @@ app.controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
 
   // method that returns an array of all of the line boundaries for top-level requirements
   $scope.getActivePrograms = function() {
-    var string = $scope.paste.string;
-    var array = $scope.paste.array;
     var active_programs = [];
 
     // get line where 'Academic Advisement Report' starts
@@ -191,7 +190,6 @@ app.controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
 
   // method that returns all of the requirements at a certain level
   $scope.getLevelRequirements = function(section_lines) {
-    var array = $scope.paste.array;
     var offset = section_lines.start;
     section_lines = array.lines(section_lines);
 
